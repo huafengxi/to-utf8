@@ -12,5 +12,7 @@ use find to apply to all text file in given dir
 see [[http://www.mytju.com/classcode/tools/messyCodeRecover.asp]]
 make sure change the following line in =encoding.py=
 : def get_orig_path(text): return text.decode('shift_jis', 'ignore').encode('utf-8')
+and backup with
+: cp -al dir dir-backup
 then:
 : ./encoding.py correct_path dir
